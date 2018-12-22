@@ -6,9 +6,9 @@ import datetime
 
 def wait_for_button():
     button = Button(12)
-    is_button_pressed = button.is_pressed()
+    is_button_pressed = button.is_pressed
     while is_button_pressed:
-        is_button_pressed = is_button_pressed()
+        is_button_pressed = button.is_pressed
     # end
 # end
 
@@ -21,8 +21,10 @@ def set_background(filename):
 def take_picture_and_set_background():
     ts = time.time()
     filename = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M-%S') + ".jpg"
-    take_picture(filename)
-    set_background(fielename)
+    path = "~/Pictures/"
+    filepath = path + filename
+    take_picture(filepath)
+    set_background(filepath)
 # end
 
 
