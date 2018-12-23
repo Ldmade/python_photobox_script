@@ -21,7 +21,7 @@ def set_background(filename):
 def take_picture_and_set_background():
     ts = time.time()
     filename = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M-%S') + ".jpg"
-    path = "~/Pictures/"
+    path = "/home/pi/Pictures/"
     filepath = path + filename
     take_picture(filepath)
     set_background(filepath)
@@ -29,7 +29,7 @@ def take_picture_and_set_background():
 
 
 def take_picture(filename):
-    os.system("raspistill -o " + filename + " -t 3000 -f")
+    os.system("raspistill -o " + filename + " --rotation 180 -t 2000 -f -ex sports")
 # end
 
 
@@ -39,6 +39,7 @@ def main_program():
         take_picture_and_set_background()
     # end
 
-
+print("Start")
 main_program()
-
+print("End")
+main_program()
