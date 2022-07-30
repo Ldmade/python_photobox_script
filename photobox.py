@@ -8,7 +8,9 @@ def wait_for_button():
     button = Button(12)
     is_button_pressed = button.is_pressed
     while is_button_pressed:
-        is_button_pressed = button.is_pressed
+        if not button.is_pressed:
+	    time.sleep(0.5)
+            is_button_pressed = button.is_pressed
     # end
 # end
 
