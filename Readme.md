@@ -5,3 +5,7 @@
 4. Put it into autostart. Be carful it might not work with rc.local.
     1. /etc/xdg/lxsession/LXDE-pi/autostart
     2. Add @sh /home/pi/python_photobox_script/start.sh
+  
+
+#New
+sudo apt-get install python-tk
