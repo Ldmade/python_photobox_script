@@ -7,5 +7,5 @@
     2. Add @sh /home/pi/python_photobox_script/start.sh
   
 
-#New
-sudo apt-get install python-tk
+# New
+sudo apt-get install python3-pil.imagetk
