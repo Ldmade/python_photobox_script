@@ -9,6 +9,6 @@
 
 # New
 sudo apt-get install python3-pil.imagetk
-python -m pip install keyboard
+sudo python pip install keyboard
 
 
